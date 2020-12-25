@@ -1,9 +1,11 @@
 *{
     padding:0;
     margin: 0;
+    box-sizing: border-box;
 }
 body{
     font-family: 'Berkshire Swash', cursive;
+
 }
 
 #canvas1 {
@@ -11,10 +13,27 @@ body{
     top:0;
     z-index: -1;
     width: 100%;
-    height: 110%;
+    height: 100%;
     background: linear-gradient(#152434, #193549, #25497a,#2c7698, #fff);
 }
-    
+.mainContainer {
+  display: grid;
+  grid-template-areas:
+    'title title title title title'
+    'candy candy letter sam sam'
+    'candy candy letter sam sam';
+  grid-gap: 5px;
+  padding: 5px;
+}
+p::first-letter{
+color: #009639;
+font-size: 1.5em;
+}
+#signature{
+  font-size: 1em;
+  text-align: left;
+}
+
 #topImg{
         width: 100%;
         height: 109px;
@@ -26,13 +45,35 @@ body{
     h1{
         font-family: 'Mountains of Christmas', cursive;
         font-size: 5em;
-        color: rgba(196, 54, 35, 0.904);
+        color: transparent;
         -webkit-animation: fadeIn 3.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         animation: fadeIn 3.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         /* animation: titleAni 3s ease-in 3s infinite; */
         text-align: center;
-    }
 
+    }
+    .title{
+      grid-area: title;
+      color: transparent;
+      animation: titleColor 6s linear infinite;
+
+    }
+.letterText{
+  grid-area: letter;
+  line-height: 1.7;
+  font-size: 2em;
+  background-color: #fdf2d3e3;
+
+  padding: 2em 2em;
+  margin: auto;
+    margin-top: 2em;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+img {
+  width: 100%;
+  height: auto;
+}
 
 @-webkit-keyframes fadeIn {
     0% {
@@ -61,3 +102,112 @@ body{
     }
   }
   
+
+  @-webkit-keyframes titleColor{
+  
+  0% {
+    transform: rotate(2deg)  ;
+    text-shadow: 5px 5px #d62222;
+}
+25% {
+  text-shadow: 5px 5px #f2bf5a;
+
+}
+50% {
+    transform: rotate(-2deg);
+    text-shadow: 5px 5px  #01c44c;
+}
+75% {
+    text-shadow: 5px 5px #07c790;
+}
+100% {
+    transform: rotate(2deg);
+    text-shadow: 5px 5px #d62222;
+}
+}
+
+@keyframes titleColor{
+  
+  0% {
+    transform: rotate(2deg)  ;
+    text-shadow: 5px 5px #d62222;
+}
+25% {
+  text-shadow: 5px 5px #f2bf5a;
+
+}
+50% {
+    transform: rotate(-2deg);
+    text-shadow: 5px 5px  #01c44c;
+}
+75% {
+    text-shadow: 5px 5px #07c790;
+}
+100% {
+    transform: rotate(2deg);
+    text-shadow: 5px 5px #d62222;
+}
+}
+
+
+#candyCane{
+  grid-area: candy;
+  /* position: absolute;
+  top: 350px;
+  left: 30px; */
+  animation: samAni 6s ease-in-out infinite reverse;
+  
+}
+/* #candyCane2{
+  position: absolute;
+  width: 330px;
+  top: 300px;
+  left: 200px;
+  animation: samAni 3s ease-in-out infinite ;
+} */
+
+
+#sam{
+  grid-area: sam;
+  /* position: absolute;
+  top: 300px;
+  right: 30px; */
+  animation: samAni 3s ease-in-out infinite;
+}
+
+
+@keyframes samAni{
+  
+  0% {
+    transform: rotate(2deg);
+    transform-origin: bottom;
+}
+
+50% {
+    transform: rotate(-2deg);
+    transform-origin: bottom;
+}
+
+100% {
+    transform: rotate(2deg);
+    transform-origin: bottom;
+}
+}
+
+@-webkit-keyframes samAni{
+  
+  0% {
+    transform: rotate(5deg);
+
+}
+
+50% {
+    transform: rotate(-5deg);
+
+}
+
+100% {
+    transform: rotate(5deg);
+
+}
+}
