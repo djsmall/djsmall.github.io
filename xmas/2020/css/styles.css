@@ -30,6 +30,7 @@ body{
         -webkit-animation: fadeIn 3.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         animation: fadeIn 3.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         /* animation: titleAni 3s ease-in 3s infinite; */
+        text-align: center;
     }
 
 
