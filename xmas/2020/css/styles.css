@@ -1,0 +1,62 @@
+*{
+    padding:0;
+    margin: 0;
+}
+body{
+    font-family: 'Berkshire Swash', cursive;
+}
+
+#canvas1 {
+    position: absolute;
+    top:0;
+    z-index: -1;
+    width: 100%;
+    height: 110%;
+    background: linear-gradient(#152434, #193549, #25497a,#2c7698, #fff);
+}
+    
+#topImg{
+        width: 100%;
+        height: 109px;
+        background-image: url("../img/xmasLights.png");
+        background-repeat: repeat;
+    
+    }
+
+    h1{
+        font-family: 'Mountains of Christmas', cursive;
+        font-size: 5em;
+        color: rgba(196, 54, 35, 0.904);
+        -webkit-animation: fadeIn 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: fadeIn 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        /* animation: titleAni 3s ease-in 3s infinite; */
+    }
+
+
+@-webkit-keyframes fadeIn {
+    0% {
+      letter-spacing: 1em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      letter-spacing: 1em;
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
